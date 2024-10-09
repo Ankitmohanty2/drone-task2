@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    width: 600px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.drone {
+    width: 40px;
+    position: absolute;
+}
+
+.drone-right {
+    top: 20px;
+    right: 20px;
+    width: 140px;
+}
+
+.drone-left {
+    width: 140px;
+    bottom: 330px;
+    left: 20px;
+}
+
+.drone-bottom-right {
+    bottom: 250px;
+    right: 40px;
+    width: 80px;
+    z-index: 1; 
+}
+
+main {
+    text-align: center;
+    padding: 0 40px;
+}
+
+h1 {
+    color: #0047AB;
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 10px;
+    font-weight: normal;
+}
+
+h2 {
+    color: #0047AB;
+    font-size: 48px;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+p {
+    color: #0047AB;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -90px; 
+    right: -90px;
+    height: 450px; 
+    background-color: #0047AB;
+    transform: skewY(-24deg);
+    z-index: 0;
+    top: 220px;
+}
+
+.profile {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 9px solid white;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.profile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 9px solid #0047AB;
+    box-sizing: border-box;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 37%, 0% 80%);
+}
+
+.employee-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-info {
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0 auto;
+    background-color: #0047AB;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    position: relative;
+    top: 20px;
+}
+
+.employee-info p {
+    color: white;
+    font-size: 20px;
+    margin: 40px 0 0;
+    font-weight: normal;
+}
